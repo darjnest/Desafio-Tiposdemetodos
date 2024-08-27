@@ -6,7 +6,7 @@ class Personaje:
         """
         self.nombre = nombre
         self.nivel = 1
-        self.experencia = 0
+        self.experiencia = 0
 
     def get_estado(self):
         """
@@ -17,13 +17,13 @@ class Personaje:
             f"NOMBRE: {self.nombre} \t NIVEL: {self.nivel} \t EXP: {self.experiencia}"
         )
 
-    def set_estado(self, experencia):
+    def set_estado(self, experiencia):
         """
         Setter para asignar experiencia al personaje y actualizar su nivel.
         La experiencia puede ser positiva o negativa.
         Cada 100 puntos de experiencia, el nivel sube. Si la experiencia total es negativa, el nivel baja.
         """
-        experencia_total = self.experencia + experencia
+        experencia_total = self.experiencia + experiencia
 
         # Aumenta el nivel por cada 100 puntos de experiencia positiva
         while experencia_total >= 100:
